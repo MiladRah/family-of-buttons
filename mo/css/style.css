@@ -1,0 +1,77 @@
+/* Mohammed Pari | converted from Figma (Mohammeds page) */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { overflow-x: hidden; }
+body {
+  background: #1a6eb5;
+  color: #4a5568;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+img, svg { display: block; }
+ul { list-style: none; }
+.icon { width: var(--s, 12px); height: var(--s, 12px); flex-shrink: 0; }
+
+/* ---------- Canvas: every block sits at its exact Figma position (1183 x 1232) ---------- */
+.canvas { position: relative; width: 1183px; height: 1232px; margin: 0 auto; overflow: hidden; background: #1a6eb5; }
+/* Wider than the design: scale the whole canvas up so it fills the window */
+@media (min-width: 1184px) { .canvas { zoom: var(--k, 1); } }
+.blk { position: absolute; left: var(--x); top: var(--y); width: var(--w); }
+
+/* ---------- Header (the whole header group is 85% opaque in Figma) ---------- */
+.header { position: absolute; left: 0; top: 0; width: 1175px; height: 369px; opacity: 0.85; background: url(../images/header.jpg) center / cover no-repeat; }
+.emblem { position: absolute; left: 121px; top: 205px; width: 110px; height: 110px; border-radius: 50%; }
+.header-text { position: absolute; left: 252px; top: 205px; display: flex; flex-direction: column; gap: 4px; white-space: nowrap; }
+.header-text h1 { font-size: 36px; font-weight: 800; color: #fff; }
+.traits { display: flex; gap: 10px; align-items: center; font-size: 11px; }
+.traits b { font-weight: 600; color: #a8d8f0; text-transform: uppercase; }
+.traits i { font-style: normal; color: #fff; opacity: 0.6; }
+.tagline { font-size: 13px; font-style: italic; color: #d0eaf8; }
+
+.sky { position: absolute; left: 2px; top: 358px; width: 1180px; height: 874px; background: url(../images/sky.jpg) center top / cover no-repeat; }
+
+/* ---------- Cards ---------- */
+.card { height: var(--h); background: rgba(255, 255, 255, 0.92); border-radius: 12px; box-shadow: 0 3px 10px rgba(0, 51, 128, 0.15); padding: 14px; display: flex; flex-direction: column; gap: 8px; overflow: hidden; }
+.card-title { display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; color: #1a3c6e; text-transform: uppercase; white-space: nowrap; }
+.card-title .dot { width: 20px; height: 20px; border-radius: 50%; background: #1a6eb5; color: #fff; display: grid; place-items: center; flex-shrink: 0; }
+.card p.text { font-size: 10px; color: #4a5568; }
+
+.identity-role { display: flex; align-items: center; gap: 6px; }
+.identity-role::before { content: ""; width: 4px; height: 30px; border-radius: 2px; background: #1a6eb5; flex-shrink: 0; }
+.identity-role b { display: block; font-size: 11px; font-weight: 700; color: #1a3c6e; }
+.identity-role span { display: block; margin-top: 1px; font-size: 10px; color: #718096; }
+
+.bullets { display: flex; flex-direction: column; gap: 8px; }
+.bullets li { display: flex; gap: 6px; align-items: flex-start; font-size: 10px; color: #4a5568; }
+.bullets li::before { content: "•"; font-size: 12px; line-height: 1; color: #1a6eb5; }
+
+.photo { position: relative; height: 130px; border-radius: 12px; overflow: hidden; background: url(../images/road-trip.jpg) center / cover no-repeat; box-shadow: 0 3px 10px rgba(0, 51, 128, 0.15); }
+.photo::before { content: ""; position: absolute; inset: 0; background: rgba(10, 61, 122, 0.3); }
+.photo span { position: absolute; left: 10px; bottom: 8px; font-size: 9px; font-weight: 600; color: #fff; }
+
+/* Destinations */
+.card.dest { gap: 10px; }
+.flags { display: flex; flex-wrap: wrap; gap: 6px; }
+.flag { padding: 4px 8px; border-radius: 12px; background: #e8f2fb; color: #1a3c6e; font-size: 9px; font-weight: 600; white-space: nowrap; }
+.flag.active { background: #1a6eb5; color: #fff; }
+.counting { display: flex; align-items: center; gap: 8px; font-size: 8px; color: #718096; }
+.counting::before { content: ""; flex: 1; height: 1px; background: #e2e8f0; }
+
+/* Sections that are pictures in the Figma file (exported at 2x so they stay sharp) */
+.pic img { width: 100%; height: auto; }
+
+/* ---------- Smaller screens: stack everything ---------- */
+@media (max-width: 1182px) {
+  .canvas { width: 100%; max-width: 600px; height: auto; padding: 0 16px 32px; overflow: visible; display: flex; flex-direction: column; gap: 16px; background: url(../images/sky.jpg) center top / cover no-repeat, #1a6eb5; }
+  .sky { display: none; }
+  .blk { position: static; width: auto; }
+  .card { height: auto; }
+  .blk.photo { position: relative; left: auto; top: auto; }
+  .header { position: relative; width: auto; height: auto; margin: 0 -16px; padding: 40px 16px; opacity: 1; display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center; }
+  .emblem, .header-text { position: relative; left: auto; top: auto; }
+  .header-text { align-items: center; white-space: normal; text-shadow: 0 1px 8px rgba(0, 30, 70, 0.7); }
+  .header-text h1 { font-size: 30px; }
+  .traits { flex-wrap: wrap; justify-content: center; }
+  .pic { border-radius: 12px; overflow: hidden; }
+  .pic.quote, .pic.strip { max-width: 304px; align-self: center; border-radius: 0; }
+}

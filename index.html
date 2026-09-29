@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A Family of Buttons</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Caveat:wght@500;700&family=Figtree:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="eyebrow">CPSC 581 · Group Project 1</p>
+    <h1>A Family of Buttons</h1>
+    <p class="lede">Drag any two of us into the box to see what we share and where we differ. Tap a button to visit that person's page.</p>
+  </header>
+
+  <section class="compare" id="compare" aria-label="Compare two people">
+    <div class="side a" id="sideA"></div>
+
+    <div class="shared" id="shared"></div>
+
+    <div class="tray" id="tray" aria-label="Comparison box">
+      <div class="slots">
+        <div class="slot" data-slot="0"></div>
+        <div class="slot" data-slot="1"></div>
+      </div>
+      <div class="tray-actions">
+        <p class="tray-note" id="trayNote">drag and drop</p>
+        <button class="clear" id="clearBtn" type="button">Clear</button>
+      </div>
+    </div>
+
+    <div class="side b" id="sideB"></div>
+  </section>
+
+  <section class="family" aria-label="Team members">
+    <ul class="row" id="row"></ul>
+    <svg class="bracket" viewBox="0 0 400 36" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M50 0 V26 H350 V0 M150 0 V26 M250 0 V26 M200 26 V36" fill="none" stroke="currentColor" stroke-width="1.6" vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <svg class="bracket-arrow" viewBox="0 0 16 22" aria-hidden="true">
+      <path d="M8 0 V20 M2 13 L8 20 L14 13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <p class="sites">links to personal pages</p>
+    <p class="kbd-hint">Keyboard: Tab to a button, Enter opens their site, Space adds them to the box.</p>
+    <p class="placeholder-note" id="placeholderNote" hidden></p>
+  </section>
+</div>
+
+<div class="toast" id="toast" role="status" hidden></div>
+<div class="sr" id="live" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
